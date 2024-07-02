@@ -70,9 +70,8 @@ TEMPLATES = [
 ]
 # Static files (CSS, JavaScript, Images) 설정
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+STATICFILES_DIRS = [ BASE_DIR / "hangout" / "static",]
+
 WSGI_APPLICATION = 'hangout.wsgi.application'
 
 

@@ -1,4 +1,4 @@
-# views.py
+# views.py in hangout directory
 
 from django.shortcuts import render
 

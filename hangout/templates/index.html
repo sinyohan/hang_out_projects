@@ -4,5 +4,20 @@
 
 {% block content %}
 <h1>환영합니다!</h1>
-<p>여기어때 사이트에 오신 것을 환영합니다.</p>
+<p>여기여때 사이트에 오신 것을 환영합니다.</p>
+
+{% if posts %}
+    <h2>게시물 목록</h2>
+    {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content }}</p>
+            <img src="{{ post.image_url }}" alt="{{ post.title }}">
+            <p>{{ post.created_at }}</p>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>게시물이 없습니다.</p>
+{% endif %}
+
 {% endblock %}
